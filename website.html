@@ -1,0 +1,761 @@
+<html lang="en">
+ <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HiHello</title>
+        <link rel="stylesheet" href="wsh.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ </head>
+<style>
+body {
+  margin: 0;
+}
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+ul{
+    list-style-type: none;
+    margin: 0 0 0 150px;
+    padding: 12px;
+    overflow: hidden;
+    background-color: white;
+ }
+  li {
+    float: left;
+  } 
+  .logo img{
+        position: absolute;
+        margin-top: 15px;
+        margin-left: 10px;
+  }
+  li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+  }
+  
+  li a:hover {
+    background-color: gray;
+  }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color:  #7239d6;
+    font-family: inherit;
+    margin: 0; 
+  }
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: gray;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-content {
+    display:block;
+  }
+.column {
+  float: down;
+  width: 20%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  display: block;
+  float: none;
+}
+@media screen and (max-width:500px) {
+  .column {
+    width: auto;
+  }
+}
+.login-container {
+  float: right;
+}
+.input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width:120px;
+}
+.login-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background-color: gray;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.login-container button:hover {
+  background-color: green;
+}
+@media screen and (max-width: 600px) {
+.login-container {
+    float: none;
+  }
+  .a, .input[type=text], .login-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+.block {
+  display: block;
+  width: 20%;
+  border: none;
+  background-color: #7239d6;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+.wrapper{
+  margin: 150px auto;
+  width:70%;
+}
+.h2{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.img_deg{
+  max-width: 320px;
+  max-height: 320px;
+  float:right;
+  border:3px solid white;
+  border-radius: 10px ;
+  margin-left: 60px;
+}
+.text-box{
+  color: black;
+}
+.text-box h2{
+  font-size: 40px;
+  color: #191847;
+  font-family: Nunito Sans, sans-serif;;
+}
+.text-box p{
+  font-size: 16px;
+}
+.app_logo{
+  float: left;
+  padding: 8px;
+}
+.play_logo{
+  float: none;
+  padding-top: 5px;
+}
+.purple {
+  max-height: none;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  text-align: center;
+  object-fit: fill;
+  background-color: #7239d6;
+  flex-flow: wrap;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: row;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+}
+.section{
+  display: flex;
+  justify-content: left;
+  padding: -150px;
+  width: 100%;
+  margin: 10rem auto 0 auto;
+  margin-bottom: -35px;
+}
+.section img{
+  height: 350px;
+  margin-left: 120px;
+}
+.section h2{
+  margin: 40px;
+  font-size: 40px;
+  color: black;
+}
+.section p{
+  color: gray;
+  margin-left: 50px;
+  margin-right: 25px;
+  margin-top: -25px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.section1{
+  display: flex;
+  justify-content:left;
+  padding: -150px;
+  width: 100%;
+  margin: 10rem auto 0 auto;
+  margin-bottom: -35px;
+}
+.section1 img{
+  height: 350px;
+  margin-right: 100px;
+}
+.section1 h2{
+  margin: 50px;
+  margin-left: 170px;
+  font-size: 35px;
+  color: black;
+}
+.section1 p{
+  color: gray;
+  margin-left: 170px;
+  margin-right: 25px;
+  margin-top: -25px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.section2{
+  display: flex;
+  justify-content:left;
+  padding: -150px;
+  width: 100%;
+  margin: 10rem auto 0 auto;
+  background-color: whitesmoke; 
+  margin-bottom: -35px;
+}
+.section2 img{
+  height: 400px;
+  margin-left: 120px;
+}
+.section2 h2{
+  margin: 40px;
+  font-size: 40px;
+  color: black;
+}
+.section2 p{
+  color: gray;
+  margin-left: 50px;
+  margin-right: 25px;
+  margin-top: -25px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+  .section3{
+    display: flex;
+    justify-content:left;
+    padding: -150px;
+    width: 100%;
+    margin: 10rem auto 0 auto;
+    margin-bottom: -35px;
+  }
+  .section3 img{
+    height: 350px;
+    margin-right: 100px;
+  }
+  .section3 h2{
+    margin: 50px;
+    margin-left: 170px;
+    font-size: 35px;
+    color: black;
+  }
+  .section3 p{
+    color: gray;
+    margin-left: 170px;
+    margin-right: 25px;
+    margin-top: -25px;
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+  .section4{
+    display: flex;
+    justify-content:left;
+    padding: -150px;
+    width: 100%;
+    margin: 10rem auto 0 auto;
+    background-color: whitesmoke; 
+    margin-bottom: -35px;
+  }
+  .section4 img{
+    height: 350px;
+    margin-left: 120px;
+  }
+  .section4 h2{
+    margin: 50px;
+    font-size: 4opx;
+    color: black;
+  }
+  .section4 p{
+    color: gray;
+    margin-left: 50px;
+    margin-right: 25px;
+    margin-top: -25px;
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+  .section5{
+    display: flex;
+    justify-content:left;
+    padding: -150px;
+    width: 100%;
+    margin: 10rem auto 0 auto;
+    margin-bottom: -35px;
+  }
+  .section5 img{
+    max-width: 320px;
+    max-height: 320px;
+    margin-right: 90px;
+  }
+  .section5 h2{
+    margin: 40px;
+    margin-left: 150px;
+    font-size: 35px;
+    color: black;
+  }
+  .section5 p{
+    color: gray;
+    margin-left: 150px;
+    margin-right: 25px;
+    margin-top: -25px;
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+  .section6{
+    display: flex;
+    justify-content:left;
+    padding: -150px;
+    width: 100%;
+    margin: 10rem auto 0 auto;
+    margin-bottom: -35px;
+    margin-right: 150px;
+  }
+  .section6 img{
+    height: 400px;
+    margin-left: 70px;
+  }
+  .section6 h2{
+    margin: 40px;
+    font-size: 40px;
+    color: black;
+  }
+  .section6 p{
+    color: gray;
+    margin-left: 50px;
+    margin-right: 25px;
+    margin-top: -25px;
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+  .column2 {
+    float: left;
+    width: 7.14%;
+    padding: 15px;
+    margin-left: 50px;
+    background-color: whitesmoke;
+    margin-top:45px;
+    margin-left: 50px;
+  }
+  .row2::after {
+    content: "";
+    clear: both;
+    display: side;
+    margin-top: 45px;
+    background-color: whitesmoke;
+  }
+  .frame{
+    justify-content: center;
+    margin-top: 240px ;
+    margin-left: 315px ;
+  }
+  .frame h2{
+    margin-right: 300px;
+    font-weight: 600px;
+    line-height: 30px;
+  }
+  .start{
+    background-color: purple;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    display: flex;
+    margin-top: 50px;
+  }
+  .start h2{
+    color: #fff;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    line-height: 120%;
+  }
+  .start p{
+    margin-top: 0;
+    color: #7239d6;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    font-family: Nunito Sans, sans-serif;
+  } 
+  .container {
+    display: block;
+    width: 20%;
+    border: none;
+    background-color: white;
+    color: #7239d6;
+    padding: 14px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;color: #5d26bb;
+    background-color: #fff;
+    border-radius: 6px;
+    align-self: center;
+    padding: 15px 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+  }
+  .container:hover {
+    background-color: white;
+    color: black;
+  }
+  .start img{
+    max-width: 720px;
+    padding-top: 20px;
+    display: inline-block;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
+  .footer{
+    background-color: whitesmoke;
+  }
+  .footer p{
+    color: black;
+  }
+  .div1 {
+    width:25%;
+    margin:right;
+    margin-left: 25px;
+    margin-top: 50px;
+    text-decoration: none;
+  }
+  .div2{
+    width:25%;
+    margin-left:215px;
+    margin-top: -323px;
+  }
+  .div3{
+    width:25%;
+    margin-left: 560px;
+    margin-top: -322px;
+  }
+  .div4{
+    width:25%;
+    margin-left: 750px;
+    margin-top: -268px;
+  }
+  .div5{
+    width:25%;
+    margin-left: 1000px;
+    margin-top: -346px;
+  }
+  .checkbtn{
+    font-size: 30px;
+    float: centre;
+    line-height: 80px;
+    margin-right:40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+</style>
+    <body> 
+      <div class="items">
+           <div class="logo" ><a href="#"><img src="HIHELLO.jpeg" style="width:100px;height:50px;"></a>
+           </div>
+       <ul> 
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>  
+          <button class="block">Create a Card</button>
+                  <div class="login-container">
+                    <form action="./logi.html">
+                      <button type="submit">Login</button>
+                    </form>
+                  </div>   
+                      <div class="dropdown">
+                         <button class="dropbtn">Products&Solutions
+                          <class="fa fa-caret-down"><gtfr>
+                         </button>
+                         <div class="dropdown-content">
+                              <a><strong>Explore</strong>
+                                <p>Digtal Buisness Cards</p>
+                                <p>Sharing Your Card</p>
+                                <p>Address Book</p>
+                                <p>Business Card Scanner</p>
+                                <p>Virtual Backgrounds</p>
+                                <p>Email Signatures</p>
+                                <p>NFC Business Cards</p>
+                             </a>
+                                 <div class="column">
+                                     <a><strong>FOR INDIVIDUALS</strong>
+                                       <p>HiHello Professionals</p>
+                                     </a>
+                                 </div>
+                                 <div class="column">
+                                     <a><strong>FOR BUSINESS</strong>
+                                       <p>HiHello Business</p>
+                                     </a>
+                                 </div>
+                                 <div class="column">
+                                     <a><strong>FOR ENTERPRISES</strong>
+                                       <p>HiHello Enterprise</p>
+                                     </a>
+                                 </div>
+                         </div>        
+                       </div> 
+                 <li><a href="#">Blog</a></li>
+                 <li><a href="#">Pricing</a></li>       
+       </div>   
+      </ul>   
+      <div class="wrapper"> 
+        <img class="img_deg" src="PG2.jpeg" style="width:400px;height:400px;">
+         <div class="text-box">
+          <h2>The Best Digital Business Card</h2>
+          <p>HiHello is a free digital business card and contact manager app   designed to help you grow your network.</p>  
+        </div>
+        <div class="app_logo" ><a href="https://apps.apple.com/app/apple-store/id1378114205"><img src="APPSTORE.jpeg" style="width:150px;height: 38px;"></a></div>
+        <div class="play_logo"><a href="https://play.google.com/store/apps/details?id=play.me.hihello.app"><img src="PLAYSTORE.jpg" style="width:150px;height:50px;"></a></div>
+      </div>
+      <div class="purple">
+        <div class="column1">
+          <img src="EASY.jpeg" style="width:25%">
+           <h2>Easily create digital<br>business cards</h2>
+        </div>
+        <div class="column1">
+          <img src="SHARE.jpeg" style="width:25%">
+          <h2>Share your cards with<br>anyone</h2>
+        </div>
+        <div class="column1">
+          <img src="MANAGE.jpeg" style="width:25%">
+          <h2>Manage your contacts<br>seamlessly</h2>
+        </div>
+        <div class="column1">
+          <img src="PAPER.jpeg" style="width:25%">
+          <h2>Turn paper cards into<br>digital contacts</h2>
+        </div>
+      </div> 
+         <div class="section">
+          <img src="NEW.jpeg">
+          <div class="text">
+            <h2><b>Network smarter with free digital business cards.</b></h2>
+            <p>Stand out from the crowd with digital business cards. Not<br>only are digital cards better for the environment, they’re also<br> better for your wallet and will help you make a great first<br>impression.
+            <br><br><a href="https://www.hihello.me/features/digital-business-cards">Learn more about our digital business cards →</a>
+          </p> 
+          </div>
+         </div>
+          <div class="section1">
+            <div class="text1">
+              <h2><b>Easily share and receive information.</b></h2>
+              <p>Share your virtual business card using a QR code or send it through email, text, social media, and more. Anyone can receive your digital card, even if they don't have the app.
+              <br><br><a href="https://www.hihello.me/features/share-digital-business-cards">Learn more about sharing your cards →</a></p>
+            </div>
+              <img src="N2.jpeg">
+          </div>
+          <div class="section2">
+            <img src="N3.jpeg">
+             <div class="text2">
+              <h2><b>A better way to view your contacts.</b></h2>
+              <p>Your Self-Healing Address Book will update itself with your contacts’ latest information, making contact management effortless. Customize your address book by adding notes and tags to your contacts, and easily organize your contacts into groups.
+              <br><br><a href="https://www.hihello.me/features/self-healing-address-book">Learn more about our Self-Healing Address Book →</a></p>
+             </div>
+          </div>
+          <div class="section3">
+            <div class="text3">
+              <h2><b>Turn paper cards into digital contacts.</b></h2>
+              <p>We know there are people who love physical business cards.If someone hands you a physical card, use our human-verified business card scanner to easily digitize your new contact’s information. 
+              <br><br><a href=https://www.hihello.me/features/business-card-scanner>Learn more about our business card scanner →</a></p>
+            </div>
+              <img src="N4.jpeg">
+          </div>
+          <div class="section4">
+            <img src="N5.jpeg">
+             <div class="text4">
+              <h2><b>Create virtual backgrounds.</b></h2>
+              <p>Between video meetings and virtual events, it’s safe to assume a lot of people are using Zoom, Microsoft Teams, and Google Meet to conduct business. HiHello's virtual background tool allows you to add your digital card’s QR code to a background of your choosing, so you can continue networking online with ease.
+              <br><br><a href="https://www.hihello.me/features/virtual-backgrounds">Learn more about our virtual backgrounds →</a></p>
+             </div>
+          </div>
+          <div class="section5">
+            <div class="text5">
+              <h2><b>Generate email signatures.</b></h2>
+              <p>Use HiHello’s signature generator to create an email signature that links back to your digital card. Choose which business card you want to use, pick a signature style, and then copy and paste your signature into your email provider—it’s that easy. HiHello email signatures are easy to make, professional, and on-brand.
+              <br><br><a href="https://www.hihello.me/features/email-signatures">Learn more about email signatures →</a></p>
+            </div>
+              <img src="N6.jpeg">
+          </div>
+          <div class="section6">
+            <img src="N7.jpeg">
+            <div class="text6">
+              <h2><b>Virtual cards for the entire team.</b></h2>
+              <p>Set up your entire team with branded digital business cards.More affordable and eco-friendly than paper business cards, HiHello Business gives you all the benefits of our free plan,with premium features like corporate branding, custom URLs, administrative control, and more.
+              <br><br><a href="https://www.hihello.me/business">Learn more about HiHello Business→</a></p>
+            </div>
+         </div>
+        <div class="row2">
+          <br><br><br>
+           <h2 style="text-align:center;"><b>HiHello is used by people across all industries</b></h2>
+          <div class="column2">
+            <img src="C:\xampp\htdocs\php\GOOGLE.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="UA.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="BHHS.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="CARTA.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="SAKS.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="AMAZON.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="VER.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="Z.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="AT.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="HAIR.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="ADP.jpeg" style="width:40px;height:40px;">
+          </div>
+          <div class="column2">
+            <img src="KW.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="EXP.jpeg" style="width:40px;height:40px;" >
+          </div>
+          <div class="column2">
+            <img src="MART.jpeg" style="width:40px;height:40px;">
+          </div>
+        </div>
+        <br><br><br>
+         <div class="frame">
+          <br><br><br>
+          <h2 style="text-align:center;"><b>See how HiHello works</b></h2>
+          <iframe title="vimeo-player" src="https://player.vimeo.com/video/355221722?h=00316b5c63" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+         </div>
+          <div class="start">
+              <h2><b>Create your digital business card today.</b></h2>
+              <p>Get started for free with HiHello and grow your network.</p>
+              <button class="container">Get Started</button>
+              <img src="C:\Users\kosur\Downloads\start.png">
+          </div>
+           <div class="footer">
+              <div class="div1">
+                <h2><b>HiHello</b></h2>
+                <p><a style="text-decoration: none" href="https://www.hihello.me/professional">HiHello Professional</a><br><br>
+                <a style="text-decoration: none" href="https://www.hihello.me/business">HiHello Business</a><br><br>
+                <a style="text-decoration: none" href="https://www.hihello.me/enterprise">HiHello Enterprise</a><br><br>
+                Get the App<br><br>
+                <a style="text-decoration: none" href="https://www.hihello.me/blog">Blog</a><br><br>
+                <a style="text-decoration: none" href="https://www.hihello.me/works-with-hihello">Works With HiHello</a><br><br>
+                <a style="text-decoration: none" href="https://support.hihello.com/hc/en-us">Help Center</a><br><br></p>
+              </div>
+                 <div class="div2">
+                   <h2><b>Explore</b></h2>
+                   <p><a style="text-decoration: none" href="https://www.hihello.me/features/digital-business-cards">Digital Business Cards</a><br><br>
+                    <a style="text-decoration: none" href="https://www.hihello.me/features/share-digital-business-cards">Sharing Business Card</a><br><br>
+                    <a style="text-decoration: none" href="https://www.hihello.me/features/self-healing-address-book">Digital Address Book</a><br><br>
+                    <a style="text-decoration: none" href="https://www.hihello.me/features/business-card-scanner">Business Card Scanner</a><br><br>
+                    <a style="text-decoration: none" href="https://www.hihello.me/features/virtual-backgrounds">Virtual Background for Zoom, Google Meet and Microsoft Teams</a><br><br>
+                    <a style="text-decoration: none" href="https://www.hihello.me/features/email-signatures">Email Signature</a><br><br>
+                    <a style="text-decoration: none" href="https://www.hihello.me/features/nfc-business-cards">NFC Business Cards</a></p>
+                 </div> 
+                   <div class="div3">
+                     <h2><b>Company</b></h2>
+                     <p><a style="text-decoration: none" href="https://www.hihello.me/about">About Us</a><br><br>
+                      <a style="text-decoration: none" href="https://www.hihello.me/press">Press</a><br><br>
+                      <a style="text-decoration: none" href="https://jobs.lever.co/hihello">Careers</a><br><br>
+                      <a style="text-decoration: none" href="https://www.hihello.me/contact">Contact Us</a><br><br>
+                      <a style="text-decoration: none" href="https://www.hihello.me/security">Security</a><br><br>
+                      <a style="text-decoration: none" href="https://www.hihello.me/privacy">Privacy Summary</a></p>
+                   </div> 
+                     <div class="div4">
+                        <h2><b>Legal</b></h2>
+                        <P><a style="text-decoration: none" href="https://www.hihello.me/legal/privacy">Privacy Policy</a><br><br>
+                        <a style="text-decoration: none" href="https://www.hihello.me/legal/terms">Terms of Service</a><br><br>
+                        <a style="text-decoration: none" href="https://www.hihello.me/legal/dpa">Data Protection Addendum</a><br><br>
+                        <a style="text-decoration: none" href="https://www.hihello.me/legal/subprocessors">Subprocessors</a><br><br>
+                        <a style="text-decoration: none" href="https://www.hihello.me/legal/aup">Acceptable Use Policy</a><br><br>
+                        <a style="text-decoration: none" href="https://www.hihello.me/legal/cdpa">California Data Privacy Addendum</a><br><br>
+                        <a style="text-decoration: none" href="https://www.hihello.me/legal/hihello-unsolicited-resume-policy">Unsolicited Resume Policy</a><br><br>
+                        <a style="text-decoration: none" href="https://www.hihello.me/legal">View All</a></P>
+                     </div> 
+                     <div class="div5">
+                      <a href="https://twitter.com/HiHello"><img src="C:\Users\kosur\Downloads\twitter.png" style="width:40px;height:40px;"></a>
+                      <a href="https://www.linkedin.com/company/hihello-me/"><img src="C:\Users\kosur\Downloads\inlogo.png" style="width:40px;height:40px;"></a>
+                      <a href="https://www.facebook.com/hihello.me"><img src="C:\Users\kosur\Downloads\fb.png" style="width:40px;height:40px;"></a>
+                     </div>
+            </div>
+
+      </div>
+    </body>
+</html>

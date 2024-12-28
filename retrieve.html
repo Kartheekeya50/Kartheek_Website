@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Data</title>
+</head>
+<style>
+.wrapper{
+ position: absolute;
+        font-family: sans-serif;
+        color: red;
+    }
+</style>
+<body>
+<body background="7jQpLf.jpg">
+<div class="wrapper">
+    <h1>Data from the Database</h1>
+    <?php foreach ($data as $row){ ?>
+		<h3>Name: <?php echo $row['name']; ?></h3>
+		<p>college: <?php echo $row['college']; ?></p>
+		<p>branch: <?php echo $row['branch']; ?></p>
+	 	<p>mobile: <?php echo $row['mobile']; ?></p>
+		<p>email: <?php echo $row['email']; ?></p>
+		<p>address: <?php echo $row['address']; ?></p>
+		<p>facebook: <?php echo $row['facebook']; ?></p>
+		<p>whatsapp: <?php echo $row['whatsapp']; ?></p>
+		<p>instagram: <?php echo $row['instagram']; ?></p>
+		<p>linked_in: <?php echo $row['linked_in']; ?></p>
+		<p>heading: <?php echo $row['heading']; ?></p>
+		<p>description: <?php echo $row['description']; ?></p>
+		<p>google_pay: <?php echo $row['google_pay']; ?></p>
+		<p>phone_pe: <?php echo $row['phone_pe']; ?></p>
+		<p>bname: <?php echo $row['bname']; ?></p>
+		<p>account_number: <?php echo $row['account_number']; ?></p>
+		<p>bank_name: <?php echo $row['bank_name']; ?></p>
+		<p>ifsc_code: <?php echo $row['ifsc_code']; ?></p>
+        <!-- Add more fields as needed -->
+    <?php } ?>
+</body>
+</html>

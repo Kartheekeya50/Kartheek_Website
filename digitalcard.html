@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <title>digital-card</title>
+     <script type="text/javascript">
+     window.onload = function () { alert("Server connection is successful"); }
+     
+</script>
+</head>
+
+<style>
+
+
+
+
+
+
+
+
+
+    .card {
+        position: relative;
+        height: 500px;
+        width: 300px;
+         background-color: #ecf0f1;
+        margin: 50px auto;
+    } 
+    .header {
+        position: absolute;
+        height: 300px;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-image: linear-gradient(to right,#2B547E, #728FCE);
+    }
+    
+    .header img {
+        position: absolute;
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        left: 90px;
+        top: 22px;
+    }
+    
+    .header h3 {
+        position: absolute;
+        font-family: sans-serif;
+        color: white;
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        top: 118px;
+        left: 90px;
+    }
+    
+    .header h4 {
+        position: absolute;
+        font-family: sans-serif;
+        color: white;
+        font-size: 20px;
+        top: 146px;
+        left:14px
+    }
+    .header h5 {
+        position: absolute;
+        font-family: sans-serif;
+        color: white;
+        font-size: 20px;
+        top: 165px;
+        left:119px
+    }
+    .header i {
+         position: absolute;
+         color: white;
+         top: 118px;
+         right: 117px;
+         font-size:13px;
+   }
+    .body {
+        position: absolute;
+         height: 200px;
+        left: 0px;
+        right: 5px;
+        top: 52%;
+        background-color: #A9CCE3;
+        
+    }
+    
+    .body ul {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        right: 0;
+        top: 50px;
+    }
+    
+    .body ul li {
+        position: absolute;
+        list-style: none;
+        display: block;
+        height: 40px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background-color: #D6EAF8;
+        transition: all .3s ease-in-out;
+    }
+    
+    .body ul li p,
+    h3,
+    i {
+        position: absolute;
+    }
+    
+    .body ul li h3 {
+        top: -17px;
+        left: 58px;
+        color: #576574;
+        
+    }
+    
+    .body ul li p {
+        top: 14px;
+        left: 59px;
+        font-size: 12px;
+        font-family: Sans-serif;
+        color: #576574;
+    }
+    
+    .body ul li i {
+        left: 8px;        
+        top: 7px;
+        color: #2B547E;
+        font-size: 26px;
+    }
+    
+    .body ul li:nth-child(1) {
+        top: -16px;
+    }
+    
+    .body ul li:nth-child(2) {
+        top: 26px;
+    }
+    
+    .body ul li:nth-child(3) {
+        top: 68px;
+    }
+    
+    .body ul li:nth-child(1) i {
+        left: 12px;
+    }
+    
+    .body li:hover {
+        background-color:#FFF0F5;
+        cursor: pointer;
+    } 
+    .footer {
+        position: absolute;
+        height: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+    }
+    
+.footer ul {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 120px;
+  transform: translate(-50%, -50%);
+}
+
+.footer ul li {
+  list-style: none;
+}
+
+.footer ul li a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+ 
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+  margin-left: 20px;
+}
+
+.footer ul li a .icon {
+  position: absolute;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+  margin-left:-10px;
+  margin-top:8px
+}
+
+.footer ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.footer ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+.footer ul li a:hover:before {
+  top: 0;
+}
+
+.footer ul li:nth-child(1) a:before{
+  background: #3b5999;
+}
+
+.footer ul li:nth-child(2) a:before{
+  background: #25d366;
+}
+
+.footer ul li:nth-child(3) a:before {
+  background: #c13584;
+}
+
+.footer ul li:nth-child(4) a:before {
+  background: #0000ff;
+}
+    .body {
+        position: relative;
+        height: 260px;
+        width: 300px;
+        margin-bottom:20px;         
+    }
+.header1{
+    padding: 20px;
+   
+    background-color: #D4E6F1
+    
+}
+.header1 h3{
+    font-size: 20px;
+    font-weight: 100;
+    font-family: verdana;
+}
+  .header1 pre{
+       position: relative; 
+        font-family: sans-serif;
+        font-size: 13px;    
+}
+.header2 {
+        
+        position: relative;
+       height: 200px;
+        width: 300px;
+        margin-bottom:0px;
+         background-color: #A9CCE3
+       
+    }
+ .header2 h2:hover{
+    background-color:#F0FFFF;
+}
+.img-container {
+			position: relative;
+			width: 500px;
+			height: 500px;
+                   margin-bottom:0px;
+		}
+
+		.img-container img {
+			position: absolute;
+			top: -35px;
+			left: 0px;
+			width: 300px;
+			height: 300px;
+                     margin-bottom:0px;
+         }
+.header3 {
+         position: relative;
+        height: 300px;
+        width: 300px;
+        margin-top:-235px;
+        background-color:#A9CCE3
+            
+    }
+.header3 h2:hover{
+    background-color:#F0FFFF;
+}
+.header3 input{
+padding: 12px 20px;
+  margin-top: 190px ;
+   margin-left: 90px ;
+  box-sizing: border-box;
+}
+.header3 input[type="submit"]{
+    background-color:#D4E6F1;
+}
+.header3 input[type="submit"]:hover{
+    background-color:whitesmoke;
+}
+
+
+.form{
+      height: 400px;
+     width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  margin-top:20px;
+  outline: none;
+  background-color:#A9CCE3
+   
+}
+
+.form input:focus {
+ 
+  background-color:#D4E6F1;
+}
+.form input, textarea{
+  width: 100%;
+  
+ }
+.form textarea:focus {
+  background-color:#D4E6F1;
+}
+.form input[type="submit"]{
+    background-color:#D4E6F1;
+}
+.form input[type="submit"]:hover{
+    background-color:whitesmoke;
+}
+.full-width {
+  grid-column: span 2;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 2px;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+</style>
+
+<body background="blue.png">
+
+
+
+
+
+
+
+
+    <div class="card">
+        <div class="header">
+            <img src="vanisri.jpg">
+             
+            <h3>Vani sri</h3>
+            <h4>Adikavi Nannayya University</h4>
+            <h5>CSE</h5>
+        </div>
+
+        <div class="body">
+            <ul>
+                <li>
+                    <h3>+91 7815959681</h3>
+                    <p>Mobile number</p>
+                    <i class="fas fa-mobile-alt"></i>
+                </li>
+                <li>
+                    <h3>vuppulurivanisri@gmail.com</h3>
+                    <p>Email address</p>
+                    <i class="fas fa-envelope"></i>
+                </li>
+                <li>
+                    <h3>14-2-42A,Kakinada</h3>
+                    <p>Address</p>
+                    <i class="fas fa-map-marker"></i>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a href="https://www.facebook.com/narendrapurapu"><i class="fab fa-facebook-f icon" style='font-size:25px'></i></a>
+                     </li>
+                <li>
+                    <a href=" https://wa.me/qr/TFWJWKGSPUCCH1"><i class="fab fa-whatsapp icon" style='font-size:25px'></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/_mystique_22_/"><i class="fab fa-instagram icon" style='font-size:25px'></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/vuppuluri-vani-sri-577948269/"><i class="fab fa-linkedin-in icon" style='font-size:25px'></i></a>
+                </li>
+            </ul>
+        </div>
+  <div class="body">
+          <div class="header1">
+<h3 style="color:#2F4F4F" class="hover-underline-animation">About Us</h3>
+<br>
+<br>
+<pre>
+<section>&#9885 Adikavi Nannaya University was established 
+on 22nd April 2006, by an Act of the Andhra 
+Pradesh State Legislative Assembly to meet 
+the higher education needs of East & West 
+Godavari districts.</section>
+<section>&#9885 It is an affiliating residential university with 
+territorial jurisdiction over East & West 
+Godavari districts of Andhra Pradesh,named 
+after the first poet of Telugu culture,Nannaya 
+(the eleventh century translator of 
+Mahabharata from Sanskrit to Telugu), the 
+court poet of Rajah RajahNarendra, (the 
+Eastern Chalukya King).</section>
+<section>&#9885 The University was established to 
+fulfil the cherished dream of the people of 
+this region, on the sacred banks of River 
+Godavari.</section>
+<h4 class="hover-underline-animation">&#9678 Vision & Mission:</h4>
+This University aims to combine the pristine
+cultural ethos and the contemporary demands 
+of educational excellence in its vision.
+<h4 class="hover-underline-animation">&#9678 Academics:</h4>
+The University consists of four colleges in 
+main campus namely - University College of 
+Arts & Commerce, University College of 
+Engineering, University College of Education 
+and University College of Science & Technology 
+catering to the needs of students on campus.
+</pre>
+</div>
+<div class="header2">
+<h2 style="color:#2F4F4F"><u style="color:#2F4F4F">Payment Info</u></h2>
+<ul>
+<li>
+<h3>Google Pay</h3>
+<p>8328071230</p>
+<i class="fas fa-mobile-alt"></i>
+</li>
+ <li>
+<h3>PhonePe</h3>
+<p>8328071230</p> 
+<i class="fa fa-envelope"></i>
+                </li>
+            </ul>
+            </div>
+<div class="img-container">
+		<img src="paytm.jpg">
+	</div>
+       
+<div class="header3">
+<h2 style="color:#2F4F4F"><u style="color:#2F4F4F">Bank Account Details</u></h2>
+<ul>
+<li>
+<h3>Name</h3>
+<p>Vani Sri<p>
+</li>
+<li>
+<h3>Account Number</h3>
+<p>INDB0001561<p>
+</li>
+<li>
+<h3>Bank Name</h3>
+<p>INDUSIND BANK<p>
+</li>
+</ul>
+<input type="submit" value="DOWNLOAD">
+</div>
+
+</body>
+</html>

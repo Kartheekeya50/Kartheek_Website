@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <link rel="stylesheet" type="text/css" href="llll.css">
+</head>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    background: #7239d6;
+    overflow: hidden;
+    margin-top: 120px;
+}
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .logo1 img{
+    margin-left: 85px;
+  }
+  h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group a{
+    text-decoration: none;
+  }
+  label {
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #7239d6;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-footer {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .form-footer a {
+    text-decoration: none;
+    color: black;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="logo1">
+        <a href="#"><img src="HIHELLO.jpeg" style="width:100px;height:50px;"></a>
+    </div>
+    <h2>Log in to your account</h2>
+    <form method="POST" action="bcard.html">
+    <form action="" method="post" novalidate>
+      <div class="form-group">
+        <label for="username">Enter Your Email</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <a href="#">Forgot Password?</a>
+      </div>
+      <input type="submit" value="Submit">
+</form>
+      <div class="form-footer">
+        <label for="signup">Don't have an account ? <a href="signup.html"><u>Sign Up</u></a> </label>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
